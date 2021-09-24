@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-import '../../../core/contracts/interfaces/IBiswapPair.sol';
+import '../../../biswap-core/contracts/interfaces/IBiswapPair.sol';
 import '../libraries/FixedPoint.sol';
 
 // library with helper methods for oracles that are concerned with computing average prices

@@ -1,0 +1,82 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\KSC\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;F:\oracle12\bin;F:\oracle\product\10.2.0\client_1\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet;C:\Program Files\Java\oracle-jdk-15.0.1;C:\Program Files\Java\oracle-jdk-15.0.1\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\flutter\bin;C:\Users\KSC\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Java\jre1.8.0_271\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Cryptowatch Desktop;C:\Users\KSC\.cargo\bin;C:\Program Files\Java\oracle-jdk-15.0.1;C:\Users\KSC\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\KSC\AppData\Local\Programs\Python\Python36;C:\Program Files (x86)\Microsoft VS Code\bin;F:\oracle12;C:\Program Files\Python36;C:\flutter\bin;C:\Users\KSC\AppData\Roaming\npm;C:\Users\KSC\AppData\Local\Programs\Fiddler;C:\Program Files\heroku\bin;%JAVE_HOME%\bin;C:\Program Files\Java\jre1.8.0_271\bin;F:\bin;C:\tomcat-7.0.105-windows-x64\apache-tomcat-7.0.105;F:\bin;C:\Users\KSC\.cargo\bin;C:\Users\KSC\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Java\jre1.8.0_271\bin;C:\Users\KSC\AppData\Local\Microsoft\WindowsApps
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  12.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@biswap%2fbiswap-core-libs: Not found
+      at Request.params.callback [as _callback] (C:\Users\KSC\AppData\Roaming\nvm\v12.13.1\node_modules\yarn\lib\cli.js:66992:18)
+      at Request.self.callback (C:\Users\KSC\AppData\Roaming\nvm\v12.13.1\node_modules\yarn\lib\cli.js:140763:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (C:\Users\KSC\AppData\Roaming\nvm\v12.13.1\node_modules\yarn\lib\cli.js:141735:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (C:\Users\KSC\AppData\Roaming\nvm\v12.13.1\node_modules\yarn\lib\cli.js:141657:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1184:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "@biswap/periphery",
+    "version": "1.1.0-beta.0",
+    "description": "🎚 Peripheral smart contracts for interacting with Biswap V2",
+    "engines": {
+      "node": ">=10"
+    },
+    "homepage": "https://biswap.org",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/biswap-org/periphery"
+    },
+    "files": [
+      "build",
+      "contracts"
+    ],
+    "devDependencies": {
+      "@biswap/biswap-core-libs": "0.0.1",
+      "@truffle/hdwallet-provider": "1.0.21",
+      "@types/chai": "^4.2.6",
+      "@types/mocha": "^5.2.7",
+      "@uniswap/v2-core": "1.0.0",
+      "chai": "^4.2.0",
+      "ethereum-waffle": "^2.4.1",
+      "ethereumjs-util": "^6.2.0",
+      "mocha": "^6.2.2",
+      "ncp": "^2.0.0",
+      "prettier": "^1.19.1",
+      "rimraf": "^3.0.0",
+      "solc": "0.6.6",
+      "ts-node": "^8.5.4",
+      "typescript": "^3.7.3"
+    },
+    "scripts": {
+      "lint": "yarn prettier ./test/*.ts --check",
+      "lint:fix": "yarn prettier ./test/*.ts --write",
+      "clean": "rimraf ./build/",
+      "copy-v1-artifacts": "ncp ./buildV1 ./build",
+      "precompile": "yarn clean",
+      "compile": "waffle .waffle.json",
+      "postcompile": "yarn copy-v1-artifacts",
+      "pretest": "yarn compile",
+      "test": "mocha",
+      "prepublishOnly": "yarn test"
+    },
+    "license": "GPL-3.0-or-later"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

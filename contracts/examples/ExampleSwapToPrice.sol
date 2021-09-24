@@ -1,6 +1,6 @@
 pragma solidity =0.6.6;
 
-import '../../../core/contracts/interfaces/IBiswapPair.sol';
+import '../../../biswap-core/contracts/interfaces/IBiswapPair.sol';
 import '../libraries/Babylonian.sol';
 import '../libraries/TransferHelper.sol';
 
